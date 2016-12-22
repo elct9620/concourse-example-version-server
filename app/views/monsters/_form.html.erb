@@ -1,4 +1,4 @@
-<%= form_for(monster) do |f| %>
+<%= simple_form_for(monster) do |f| %>
   <% if monster.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(monster.errors.count, "error") %> prohibited this monster from being saved:</h2>
@@ -12,23 +12,19 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :name %>
-    <%= f.text_field :name %>
+    <%= f.input :name %>
   </div>
 
   <div class="field">
-    <%= f.label :hp %>
-    <%= f.number_field :hp %>
+    <%= f.input :hp %>
   </div>
 
   <div class="field">
-    <%= f.label :mp %>
-    <%= f.number_field :mp %>
+    <%= f.input :mp %>
   </div>
 
   <div class="field">
-    <%= f.label :version_id %>
-    <%= f.text_field :version_id %>
+    <%= f.association :version %>
   </div>
 
   <div class="actions">
