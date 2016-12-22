@@ -20,7 +20,7 @@ class Game::API < Grape::API
 
   get :monsters do
     return Monster.all.pluck(:name, :hp, :mp) if params[:major].nil? && params[:minior].nil?
-    versions = Version.where("major >= ? AND minior >= ?", params[:major] || 0, params[:minior] || 0)
+    versions = Version.where("major <= ? AND minior <= ?", params[:major] || 0, params[:minior] || 0)
     Monster.where(version: versions).pluck(:name, :hp, :mp)
   end
 end
