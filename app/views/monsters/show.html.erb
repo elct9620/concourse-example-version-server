@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @monster.name %>
+</p>
+
+<p>
+  <strong>Hp:</strong>
+  <%= @monster.hp %>
+</p>
+
+<p>
+  <strong>Mp:</strong>
+  <%= @monster.mp %>
+</p>
+
+<p>
+  <strong>Version:</strong>
+  <%= @monster.version %>
+</p>
+
+<%= link_to 'Edit', edit_monster_path(@monster) %> |
+<%= link_to 'Back', monsters_path %>

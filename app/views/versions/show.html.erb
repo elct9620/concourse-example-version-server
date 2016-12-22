@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Major:</strong>
+  <%= @version.major %>
+</p>
+
+<p>
+  <strong>Minior:</strong>
+  <%= @version.minior %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @version.description %>
+</p>
+
+<%= link_to 'Edit', edit_version_path(@version) %> |
+<%= link_to 'Back', versions_path %>
